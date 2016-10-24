@@ -1,0 +1,9 @@
+{
+	"name": "25BIT_solver",
+	"version": "1.0",
+	"main": "index.js",
+	"scripts": {
+	},
+	"author": "sititou70",
+	"license": "MIT"
+}

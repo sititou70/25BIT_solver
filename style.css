@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 10px;
+	color: #ddd;
+	font-size: 18px;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 121, color-stop(1.00, #000), color-stop(0.00, #303030));
+	background: -webkit-radial-gradient(50% 50%, circle, #303030, #000);
+	background: -moz-radial-gradient(50% 50%, circle, #303030, #000);
+	background: -o-radial-gradient(50% 50%, circle, #303030, #000);
+	background: -ms-radial-gradient(50% 50%, circle, #303030, #000);
+	background: radial-gradient(50% 50%, circle, #303030, #000);
+}
+
+h1{
+	text-align: center;
+}
+
+#board{
+	padding: 5px;
+}
+
+button{
+	outline: none;
+}
+
+.button_25bit{
+	padding: 0;
+	margin: 5px;
+	border: none;
+	width: calc(20% - 5px * 2);
+	height: 0;
+	padding-top: calc((20% - 5px * 2) * 1.0588);
+}
+
+.normal_button_25bit{
+	background: url('normal_button.png');
+	background-size: contain;
+}
+
+.pushed_button_25bit{
+	background: url('pushed_button.png');
+	background-size: contain;
+}
+
+.emphasis_button_25bit{
+	box-shadow: 0 0 0 3px #bfff7f;
+}
+
+.normal_button{
+	display: inline-block;
+	width: 100%;
+	margin: 5px;
+	padding: 10px;
+	font-size: 4vw;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.normal_button:hover{
+	color: #fff;
+	background-color: #19537b;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
