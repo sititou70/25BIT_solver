@@ -18,7 +18,7 @@ __int8 trouble;
 board question;
 board one_bits[25];
 board toggle_bits[25];
-board no_answer = 0;;
+board no_answer = 0;
 clock_t start_clock, end_clock, sum_clock;
 
 void printBoard(board bits){
@@ -52,7 +52,6 @@ int main(){
 	
 	printf("calculating one_bits and toggle_bits...");
 	start_clock = clock();
-	
 	for(i = 0; i < 25; i++){
 		one_bits[i] = pow(2, i);
 	}
