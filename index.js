@@ -1,23 +1,20 @@
 'use strict';
 
-var App = require("app");
+const {app, Menu, BrowserWindow, ipcMain} = require("electron");
 var fs = require("fs");
-var Menu = require("menu");
-var BrowserWindow = require("browser-window");
-var ipcMain = require("electron").ipcMain;
 var mainWindow = null;
 var answers_buffer = null;
 
 
 // 全てのウィンドウが閉じたら終了
-App.on("window-all-closed", function(){
+app.on("window-all-closed", function(){
 	if(process.platform != "darwin"){
-		App.quit();
+		app.quit();
 	}
 });
 
 // Electronの初期化完了後に実行
-App.on("ready", function(){
+app.on("ready", function(){
 	//ansers.datを読み込む
 	fs.readFile(__dirname + "\\answers.dat", function(err, data){
 		answers_buffer = new Buffer(data, 'binary');
@@ -61,7 +58,7 @@ var menu = Menu.buildFromTemplate([
 			{
 				label: "Quit",
 				click: function(){
-					App.quit();
+					app.quit();
 				}
 			}
 		]
